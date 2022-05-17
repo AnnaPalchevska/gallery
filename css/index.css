@@ -1,122 +1,214 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:ital,wght@0,100;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@100&display=swap');
 
-/* from common.css */
-* {
-    margin: 0;
-    padding: 0;
+.gallery-top {
+  color: var(--main-text-color);
+  text-align: center;
 }
 
-:root {
-    --text-color-hover: #d0bd8c;
-    --main-text-color: rgb(37, 54, 74);
-    --background-color-wrap:rgba(37, 54, 74, 0.85);
+.gallery-top h2 {
+  font-size: 34px;
+  font-family: 'Playfair Display', serif;
 }
 
-img {
-    display: block;
-    width: 100%;
+.gallery-top p {
+  color: #515c6d;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
 }
 
-.container {
-    max-width: 980px;
-    margin: auto;
-}
-/* from common.css */
-
-.gallery h2 {
-    font-family: 'Playfair Display', serif;
-    vertical-align: baseline;
-    margin: 0;
-    padding: 0;
-    color: var(--main-text-color);
-    font-weight: 700 bold;
-    align-content: center;
-    text-align: center;
+.main-block-gallery {
+  background-color: var(--background-color-white);
+  display: grid;
+  gap: 30px;
+  padding-top: 10px;
 }
 
-.gallery img {
-    weight: 291px;
-    margin: 3px;
+@media (min-width: 640px) {
+  .main-block-gallery {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 860px) {
+  .main-block-gallery {
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 980px) {
+  .main-block-gallery {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 980px): {
+.gallery-block-item-one {
+  width: 270px;
+  height: 332px;
+ }
+}
+
+@media (min-width: 980px): {
+  .gallery-block-item-two {
+    width: 270px;
+    height: 208px;
+  }
+}
+
+@media (min-width: 980px): {
+ .gallery-block-item-three {
+    width: 270px;
+    height: 218px;
+  }
+}
+
+@media (min-width: 980px): {
+  .gallery-block-item-four {
+    width: 270px;
+    height: 322px;
+  }
+}
+
+@media (min-width: 980px): {
+  .gallery-block-item-five {
+    width: 270px;
+    height: 330px;
+  }
+}
+
+@media (min-width: 980px): {
+  .gallery-block-item-six {
+    width: 270px;
+    height: 210px;
+  }
+}
+@media (min-width: 980px): {
+  .gallery-block-item-seven {
+    width: 270px;
+    height: 560px;
+  }
 }
 
 
 
-.main-gallery {
-  align-items: center;
-  justify-content: center;
-  margin: 0 15px 0 15px;
-  display: flex;
-  position: relative;
-  z-index: 1;
+/*
+.main-block-gallery > div > div {
+  height: 300px;
 }
 
-@media (min-widht: 640px) {
-    .main-gallery {
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-around;
-          flex: 1;
-        }
-      }
-
-.section-yachtsail-trips {
-        color: #fff;
-        padding-top: 90px;
-        padding-bottom: 90px;
-        background-color: var(--background-color-wrap);
+.main-block-gallery img {
+  width: 100%;
 }
 
-.column-section-yachtsail-trips h2 {
-    color: white !important;
-    text-align: left;
+.gallery-block-column-one {
+background-color: red;
 }
 
-.YachtSail__Trips {
-      margin-top: 60px;
-      background: fixed no-repeat;
-      padding: 95;
-      text-align: left;
+.gallery-block-column-two {
+  background-color: green;
   }
 
+.gallery-block-column-three {
+  background-color: yellow;
+  }
+    
+.gallery-block-column-four {
+    background-color: blue;
+    }
+    
+
+
+
+
+.gallery {
+margin:6px;
+align-items: stretch;
+}
+  
+
+@media (min-width: 640px) {
+  .gallery-block div img  {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+}
+*/
+
+/*section two*/
+
 .section-yachtsail-trips {
-  align-items: left;
-  justify-content: left;
-  margin: 0 15px 0 15px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/gallery/background-sea-surfers.jpg);
+  background-size: cover;
+  background-position: center;
+  -webkit-background-size: cover;
+  margin-top: 30px;
+}
+
+.section-yachtsail-trips-text h2 {
+  font-size: 34px;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  text-align: left;
+}
+
+.section-yachtsail-trips-text p{
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  text-align: left;
+  font-size: 16px;
   display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  align-items: left;
+  margin-top: 20px;
+}
+
+.section-yachtsail-trips-text {
   position: relative;
-  z-index: 1;
+  z-index: 2
 }
 
-@media (min-width: 320px) {
-    .section-yachtsail-trip {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        flex: 1;
-      }
+@media (min-width: 640px) {
+  .section-yachtsail-trips {
+      display: flex;
+  }
 }
 
-.column__YachtSail__Trips button {
-    font-weight: 700;
-    font-family:'Playfair Display', serif;
-    font-size: 16px;
-    border-bottom-color: rgba(0, 0, 0, 0);
-    border-bottom-left-radius: 34px;
-    border-bottom-right-radius: 34px;
-    border-bottom-style: none;
-    border-bottom-width: 0px;
+.section-yachtsail-trips-button {
+  width: 150px;
+  height: 40px;
+  background: var(--text-color-hover);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 15px;
+  flex: 1;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
 }
 
-.button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 14px;
-    width: 75.96px;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    background: rgb(209, 172, 104);
+.section-yachtsail-trips-button:hover {
+  background: white;
+}
+
+.link, .section-yachtsail-trips-button {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+}
+
+.link, .section-yachtsail-trips-button:hover {
+  color: var(--text-color-hover);
+}
+
+.section-yachtsail-trips-image {
+  background-color: white;
+  padding: 30px;
+  justify-content: space-around;
+  align-items: center;
 }
